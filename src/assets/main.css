@@ -1,64 +1,22 @@
-@import "./base.css";
+@import './base.css';
+@import './theme.css';
 
 @theme {
-    --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-
-    --color-action-surface: var(--color-gray-900);
-    --color-action-surface-hover: var(--color-gray-800);
-    --color-action-surface-muted: var(--color-gray-700);
-    --color-action-fg: var(--color-gray-200);
-    --color-fg: var(--color-neutral-700);
-    --color-fg-muted: var(--color-neutral-500);
-    --color-fg-soft: var(--color-neutral-300);
-    --color-primary: var(--color-orange-500);
-    --color-primary-hover: var(--color-orange-400);
-    --color-primary-muted: var(--color-orange-300);
-    --color-shadow: var(--color-gray-500);
-    --color-stroke: var(--color-neutral-400);
-    --color-stroke-muted: var(--color-neutral-300);
-    --color-stroke-soft: var(--color-neutral-200);
-    --color-surface: var(--color-neutral-100);
-    --color-surface-muted: var(--color-neutral-300);
-    --color-surface-soft: var(--color-neutral-200);
-}
-
-@layer theme {
-    .dark {
-        --color-action-surface: var(--color-gray-300);
-        --color-action-surface-hover: var(--color-gray-200);
-        --color-action-surface-muted: var(--color-gray-400);
-        --color-action-fg: var(--color-gray-900);
-        --color-fg: var(--color-neutral-100);
-        --color-fg-muted: var(--color-neutral-400);
-        --color-fg-soft: var(--color-neutral-600);
-        --color-primary: var(--color-orange-600);
-        --color-primary-hover: var(--color-orange-700);
-        --color-primary-muted: var(--color-orange-800);
-        --color-shadow: var(--color-gray-700);
-        --color-stroke: var(--color-neutral-700);
-        --color-stroke-muted: var(--color-neutral-800);
-        --color-stroke-soft: var(--color-neutral-900);
-        --color-surface: var(--color-neutral-950);
-        --color-surface-muted: var(--color-neutral-900);
-        --color-surface-soft: var(--color-neutral-800);
-    }
-}
-
-@layer base {
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family:
-            Outfit,
-            ui-sans-serif,
-            system-ui,
-            -apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            sans-serif;
-        color: var(--color-fg);
-        background-color: var(--color-surface);
-    }
+  --color-action-surface: var(--shell-color-ink);
+  --color-action-surface-hover: color-mix(in srgb, var(--shell-color-ink) 86%, white);
+  --color-action-surface-muted: var(--shell-color-muted);
+  --color-action-fg: var(--shell-color-surface);
+  --color-fg: var(--shell-color-ink);
+  --color-fg-muted: var(--shell-color-muted);
+  --color-fg-soft: var(--shell-color-subtle);
+  --color-primary: var(--shell-color-accent);
+  --color-primary-hover: color-mix(in srgb, var(--shell-color-accent) 86%, black);
+  --color-primary-muted: var(--shell-color-accent-soft);
+  --color-shadow: transparent;
+  --color-stroke: var(--shell-color-hairline);
+  --color-stroke-muted: var(--shell-color-hairline);
+  --color-stroke-soft: color-mix(in srgb, var(--shell-color-hairline) 55%, transparent);
+  --color-surface: var(--shell-color-canvas);
+  --color-surface-muted: var(--shell-color-surface-muted);
+  --color-surface-soft: var(--shell-color-surface);
 }
